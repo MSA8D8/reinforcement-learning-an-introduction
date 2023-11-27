@@ -7,6 +7,7 @@
 # declaration at the top                                              #
 #######################################################################
 
+# %%
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -20,7 +21,7 @@ ACTION_STAND = 1  #  "strike" in the book
 ACTIONS = [ACTION_HIT, ACTION_STAND]
 
 # policy for player
-POLICY_PLAYER = np.zeros(22, dtype=np.int)
+POLICY_PLAYER = np.zeros(22, dtype=np.int64)
 for i in range(12, 20):
     POLICY_PLAYER[i] = ACTION_HIT
 POLICY_PLAYER[20] = ACTION_STAND
@@ -368,3 +369,5 @@ if __name__ == '__main__':
     figure_5_1()
     figure_5_2()
     figure_5_3()
+
+# %%
